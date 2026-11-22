@@ -1,3 +1,16 @@
+// The Starling Job — a top-down stealth heist game in plain static files.
+// You play Wren, a thief slipping through the Aurelia Museum at night:
+// read the guards' patrol routes and vision cones, dodge the sweeping
+// security cameras, toss decoy coins, fire an EMP to blind the cameras,
+// pick locks, lift the exhibits, and take the Starling Diamond from its
+// vault before the alarm meter fills and the night collapses.
+// This entrypoint is the hand-in step, not the game itself: it copies
+// game/ and screenshots/ from beside this file into the output directory
+// (MAKEFUN_OUTPUT_DIR, or /output in the grader) and writes dossier.json
+// there with buildDossier from vendor/makefun-game.ts — the summary of
+// the entry that the scorer checks and the judge reads.
+// Controls: WASD/arrows move · Shift sneak · E (hold) pick & grab · click toss coin · Q EMP · M mute · P pause.
+
 // A working best-game-01 entry (Node 22, standard library only): the game is this directory's
 // game/ folder, plain static files a desktop browser loads offline (game/index.html and its ES
 // modules, no library and no network request), and the program hands it in. It copies game/ and
@@ -39,3 +52,5 @@ writeFileSync(
     game_path_max_bytes: 1000,
   }),
 );
+
+console.log('The Starling Job: game and screenshots copied, dossier.json written — the museum is ready to be robbed.');
